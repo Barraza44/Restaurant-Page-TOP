@@ -63,16 +63,20 @@ function renderMenuPage() {
 
   content.appendChild(entreesContainer);
   entreesContainer.dataset.content = "seafood-entrees";
+  entreesContainer.className = "card-container";
 
   const textMainDishes = document.createElement("h2")
   textMainDishes.textContent = "Main Dishes";
   content.appendChild(textMainDishes);
+  textMainDishes.setAttribute("class", "food-head");
 
   content.appendChild(mainDishesContainer);
   mainDishesContainer.dataset.content = "seafood-main-dishes";
+  mainDishesContainer.className = "card-container";
 
   content.appendChild(dessertsContainer);
   dessertsContainer.dataset.content = "seafood-desserts";
+  dessertsContainer.className = "card-container";
 
   shrimp1.renderCard();
   shrimp2.renderCard();
