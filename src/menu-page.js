@@ -2,6 +2,7 @@ import { main } from "./index";
 import shrimpImg1 from "./shrimp1.jpg";
 import shrimpImg2 from "./shrimp2.jpg";
 import squidRings from "./rings.jpg";
+import pufflefishNuggets from "./pufflefish-n.jpg"
 
 const entreesContainer = document.createElement("div");
 const mainDishesContainer = document.createElement("div");
@@ -43,6 +44,7 @@ const shrimp1 = new Card("Shrimps in peach sauce", shrimpImg1, "entree");
 const shrimp2 = new Card("Shimps in misterious sauce", shrimpImg2, "entree");
 const squidRing = new Card("Fried squid rings", squidRings, "entree");
 
+const pufflefish = new Card("Pufferfish nuggets", pufflefishNuggets, "mainDish");
 
 
 function renderMenuPage() {
@@ -62,6 +64,10 @@ function renderMenuPage() {
   content.appendChild(entreesContainer);
   entreesContainer.dataset.content = "seafood-entrees";
 
+  const textMainDishes = document.createElement("h2")
+  textMainDishes.textContent = "Main Dishes";
+  content.appendChild(textMainDishes);
+
   content.appendChild(mainDishesContainer);
   mainDishesContainer.dataset.content = "seafood-main-dishes";
 
@@ -69,10 +75,10 @@ function renderMenuPage() {
   dessertsContainer.dataset.content = "seafood-desserts";
 
   shrimp1.renderCard();
-
   shrimp2.renderCard();
-
   squidRing.renderCard();
+
+  pufflefish.renderCard()
 
 }
 
