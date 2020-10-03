@@ -76,7 +76,7 @@ ul li:hover {
 
 /* Menu */
 
-div[data-content="seafood-entrees"] {
+.card-container {
   display: flex;
   justify-content: space-between;
 }
