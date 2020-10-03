@@ -1,22 +1,54 @@
 import "./styles.css";
 import { renderMainPage } from "./mainPage";
+import { renderMenuPage, Card } from "./menu-page";
+
 
 const main = document.querySelector("main");
 
-window.onload = () => {
+function renderContent() {
   const navigation = document.createElement("nav");
   main.appendChild(navigation);
 
-  const createList = document.createElement("ul");
-  navigation.appendChild(createList);
+  const list = document.createElement("ul");
+  navigation.appendChild(list);
 
-  for (let i = 0; i <= 3; i += 1) {
-    const list = document.createElement("li");
-    list.setAttribute("class", `el${i}`);
-    createList.appendChild(list);
-  }
+  const homeElement = document.createElement("li");
+  list.appendChild(homeElement);
+  homeElement.textContent = "Home";
+  homeElement.classList.add("el0");
 
-  const list1 = document.querySelector(".el0");
-  list1.textContent = "Home";
+  const entriesElement = document.createElement("li");
+  list.appendChild(entriesElement);
+  entriesElement.textContent = "Menu";
+  entriesElement.classList.add("el1");
+
+  const mainDishesElement = document.createElement("li");
+  list.appendChild(mainDishesElement);
+  mainDishesElement.textContent = "Contact";
+  mainDishesElement.classList.add("el2");
   renderMainPage();
-};
+}
+renderContent();
+
+const home = document.querySelector(".el0");
+const foodMenu = document.querySelector(".el1");
+
+home.addEventListener("click", () => {
+  const pageContent = document.querySelector("section");
+  if (pageContent.dataset.page !== "home") {
+    Card.removeCard();
+    pageContent.parentNode.removeChild(pageContent);
+    renderMainPage();
+  }
+});
+ foodMenu.addEventListener("click", () => {
+  const pageContent = document.querySelector("section");
+  if (pageContent.dataset.page !== "food-menu") {
+    pageContent.parentNode.removeChild(pageContent);
+    renderMenuPage();
+  }
+});
+
+
+export { main };
+

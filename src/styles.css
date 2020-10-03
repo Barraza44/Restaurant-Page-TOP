@@ -1,12 +1,132 @@
-h1{
-  font-family: 'Kreon', serif;
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: "Kreon", serif;
   font-size: 4rem;
+  margin: 12px;
+  text-align: center;
 }
 
-h2, ul li {
-  font-family: 'Ranga', serif;
+h2,
+ul li {
+  font-family: "Ranga", serif;
 }
 
-p{
-  font-family: 'Poppins', sans-serif;
+h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 12px;
+  text-align: center;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  background-color: #d1cfc5;
+  margin-top: 0;
+}
+
+ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0;
+}
+
+li {
+  display: block;
+}
+
+ul li {
+  list-style-type: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.5s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+ul li:hover {
+  color: #1490c4;
+}
+
+#img1 {
+  width: 560px;
+  height: 360px;
+  margin-left: 32%;
+}
+
+.home-page {
+  background-color: #f7ba00;
+}
+
+.main-text {
+  padding: 20px 100px;
+  margin: 20px;
+}
+
+/* Menu */
+
+div[data-content="seafood-entrees"] {
+  display: flex;
+  justify-content: space-between;
+}
+
+.food-head {
+  text-align: left;
+}
+
+section[data-page="food-menu"] {
+  background-color: #c9c59d;
+}
+
+div[data-content="seafood-entrees"] img {
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.food-card {
+  background-color: white;
+  position: relative;
+  display: block;
+  width: 350px;
+  height: 300px;
+  padding: 30px;
+  border: 1px solid rgb(185, 181, 181);
+  border-radius: 30px;
+  margin: 30px;
+  transition: transform 500ms cubic-bezier(0.79, 0.14, 0.15, 0.86);
+}
+
+.food-card p {
+  font-size: 24px;
+  text-align: center;
+}
+
+.food-card img {
+  padding-left: 12%;
+  max-width: 100%;
+  display: block;
+}
+
+div[data-content="seafood-entrees"]:focus-within .food-card,
+div[data-content="seafood-entrees"]:hover .food-card {
+  transform: translateX(-25%);
+}
+
+.food-card:hover ~ .food-card,
+.food-card:focus ~ .food-card {
+  transform: translateX(25%);
+}
+
+div[data-content="seafood-entrees"] .food-card:focus,
+div[data-content="seafood-entrees"] .food-card:hover {
+  transform: scale(1.5);
+  z-index: 1;
 }
