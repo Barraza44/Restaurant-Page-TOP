@@ -41,6 +41,7 @@ home.addEventListener("click", () => {
     renderMainPage();
   }
 });
+
  foodMenu.addEventListener("click", () => {
   const pageContent = document.querySelector("section");
   if (pageContent.dataset.page !== "food-menu") {
