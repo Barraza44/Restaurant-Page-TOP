@@ -89,7 +89,7 @@ section[data-page="food-menu"] {
   background-color: #c9c59d;
 }
 
-div[data-content="seafood-entrees"] img {
+.card-container img {
   width: 80%;
   box-sizing: border-box;
 }
@@ -113,13 +113,13 @@ div[data-content="seafood-entrees"] img {
 }
 
 .food-card img {
-  padding-left: 30px;
+  padding-left: 40px;
   max-width: 100%;
   display: block;
 }
 
-div[data-content="seafood-entrees"]:focus-within .food-card,
-div[data-content="seafood-entrees"]:hover .food-card {
+.card-container:focus-within .food-card,
+.card-container:hover .food-card {
   transform: translateX(-25%);
 }
 
@@ -128,8 +128,8 @@ div[data-content="seafood-entrees"]:hover .food-card {
   transform: translateX(25%);
 }
 
-div[data-content="seafood-entrees"] .food-card:focus,
-div[data-content="seafood-entrees"] .food-card:hover {
+.card-container .food-card:focus,
+.card-container .food-card:hover {
   transform: scale(1.5);
   z-index: 1;
 }
