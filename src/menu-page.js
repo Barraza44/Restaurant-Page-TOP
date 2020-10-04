@@ -4,6 +4,7 @@ import shrimpImg2 from "./shrimp2.jpg";
 import squidRings from "./rings.jpg";
 import pufflefishNuggets from "./pufflefish-n.jpg"
 import shrimpPlatter from "./platter.jpg";
+import octopus from "./fried-octopus.jpg";
 
 const entreesContainer = document.createElement("div");
 const mainDishesContainer = document.createElement("div");
@@ -47,6 +48,7 @@ const squidRing = new Card("Fried squid rings", squidRings, "entree");
 
 const pufflefish = new Card("Pufferfish nuggets", pufflefishNuggets, "mainDish");
 const bigShrimpPlatter = new Card("The Big Shrimp Platter", shrimpPlatter, "mainDish");
+const friedOctopus = new Card("Fried octopus", octopus, "mainDish");
 
 
 function renderMenuPage() {
@@ -86,6 +88,7 @@ function renderMenuPage() {
 
   pufflefish.renderCard();
   bigShrimpPlatter.renderCard();
+  friedOctopus.renderCard();
 
 }
 
