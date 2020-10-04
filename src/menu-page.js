@@ -84,7 +84,8 @@ function renderMenuPage() {
   shrimp2.renderCard();
   squidRing.renderCard();
 
-  pufflefish.renderCard()
+  pufflefish.renderCard();
+  bigShrimpPlatter.renderCard();
 
 }
 
