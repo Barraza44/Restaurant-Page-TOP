@@ -6,6 +6,7 @@ import pufflefishNuggets from "./pufflefish-n.jpg";
 import shrimpPlatter from "./platter.jpg";
 import octopus from "./fried-octopus.jpg";
 import blackberry from "./blackberry-cheesecake.jpg";
+import chocolate from "./fudge.jpg";
 
 const entreesContainer = document.createElement("div");
 const mainDishesContainer = document.createElement("div");
@@ -62,6 +63,7 @@ const bigShrimpPlatter = new Card(
 const friedOctopus = new Card("Fried octopus", octopus, "mainDish");
 
 const cheesecake = new Card("Blackberry cheesecake", blackberry, "dessert");
+const chocolateFudge = new Card("Chocolate fudge cake", chocolate, "dessert");
 
 function renderMenuPage() {
   const content = document.createElement("section");
@@ -93,6 +95,7 @@ function renderMenuPage() {
   const textDesserts = document.createElement("h2");
   textDesserts.textContent = "Desserts";
   textDesserts.setAttribute("class", "food-head");
+  content.appendChild(textDesserts);
 
   content.appendChild(dessertsContainer);
   dessertsContainer.dataset.content = "seafood-desserts";
@@ -105,6 +108,8 @@ function renderMenuPage() {
   pufflefish.renderCard();
   bigShrimpPlatter.renderCard();
   friedOctopus.renderCard();
+
+  cheesecake.renderCard();
 }
 
 export { renderMenuPage, Card };
