@@ -7,6 +7,7 @@ import shrimpPlatter from "./platter.jpg";
 import octopus from "./fried-octopus.jpg";
 import blackberry from "./blackberry-cheesecake.jpg";
 import chocolate from "./fudge.jpg";
+import iceCream from "./vanilla.jpg";
 
 const entreesContainer = document.createElement("div");
 const mainDishesContainer = document.createElement("div");
@@ -64,6 +65,11 @@ const friedOctopus = new Card("Fried octopus", octopus, "mainDish");
 
 const cheesecake = new Card("Blackberry cheesecake", blackberry, "dessert");
 const chocolateFudge = new Card("Chocolate fudge cake", chocolate, "dessert");
+const vanillaIceCream = new Card(
+  "Vanilla ice cream with chocolate topping",
+  iceCream,
+  "dessert"
+);
 
 function renderMenuPage() {
   const content = document.createElement("section");
@@ -110,6 +116,8 @@ function renderMenuPage() {
   friedOctopus.renderCard();
 
   cheesecake.renderCard();
+  chocolateFudge.renderCard();
+  vanillaIceCream.renderCard();
 }
 
 export { renderMenuPage, Card };
