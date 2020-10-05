@@ -1,7 +1,7 @@
 import "./styles.css";
 import { renderMainPage } from "./mainPage";
 import { renderMenuPage, Card } from "./menu-page";
-
+import { renderContactPage } from "./contactPage";
 
 const main = document.querySelector("main");
 
@@ -32,6 +32,7 @@ renderContent();
 
 const home = document.querySelector(".el0");
 const foodMenu = document.querySelector(".el1");
+const contactMenu = document.querySelector(".el2");
 
 home.addEventListener("click", () => {
   const pageContent = document.querySelector("section");
@@ -42,7 +43,7 @@ home.addEventListener("click", () => {
   }
 });
 
- foodMenu.addEventListener("click", () => {
+foodMenu.addEventListener("click", () => {
   const pageContent = document.querySelector("section");
   if (pageContent.dataset.page !== "food-menu") {
     pageContent.parentNode.removeChild(pageContent);
@@ -50,6 +51,13 @@ home.addEventListener("click", () => {
   }
 });
 
+contactMenu.addEventListener("click", () => {
+  const pageContent = document.querySelector("section");
+  if (pageContent.dataset.page !== "contact-menu") {
+    Card.removeCard();
+    pageContent.parentNode.removeChild(pageContent);
+    renderContactPage();
+  }
+});
 
 export { main };
-
