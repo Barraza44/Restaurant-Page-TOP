@@ -9,6 +9,9 @@ function renderContactPage() {
   const title = document.createElement("h1");
   content.appendChild(title);
   title.textContent = "Contact";
+
+  const contactText = document.createElement("p");
+  contactText.textContent = "Any doubts remaining? Contact us!";
 }
 
 export { renderContactPage };
