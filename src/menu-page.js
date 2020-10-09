@@ -46,7 +46,7 @@ class Card {
 }
 
 const shrimp1 = new Card("Shrimps in peach sauce", shrimpImg1, "entree");
-const shrimp2 = new Card("Shimps in misterious sauce", shrimpImg2, "entree");
+const shrimp2 = new Card("Shrimps in mysterious sauce", shrimpImg2, "entree");
 const squidRing = new Card("Fried squid rings", squidRings, "entree");
 
 const pufflefish = new Card(
